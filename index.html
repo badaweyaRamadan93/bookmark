@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ccs/all.min.css">
+    <link rel="stylesheet" href="ccs/bootstrap.min.css">
+    <link rel="stylesheet" href="ccs/style.css">
+</head>
+<body class="body-bg vh-100">
+    <div class="container py-3 d-flex justify-content-center flex-column align-items-center position-relative">
+        <h1 class="fw-bold pt-3 position-relative">Bookmarker</h1>
+        <div class="content py-3 my-5 w-100">
+            <h2 class="text-center">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <form>
+                <label for="siteName" class="fs-5"><i class="fa-solid fa-book mx-2"></i> Site Name</label>
+                <input type="text" id="siteName" class="form-control mb-4">
+                <p class=""></p>
+                <label for="siteUrl" class="fs-5"><i class="fa-solid fa-link mx-2"></i>Site URL</label>
+                <input type="text" id="siteUrl" class="form-control">
+                <div class="btn-form text-center">
+                    <button class="btn btn-danger my-3 px-5" id="addBtn" type="button">submit</button>
+                </div>
+            </form>
+            <div class="error-msg bg-white w-50 mx-auto p-4 position-absolute top-50 start-50 translate-middle shadow rounded-3 d-none" id="cancel">
+                <div class="rounded-circle mx-auto text-center cancel-btn">
+                    <i class="fa-solid fa-xmark text-danger fs-1"></i>
+                </div>
+                <h3 class="text-center text-danger">oops !!!</h3>
+                <p class="fw-bold">Site Name or Url is not valid, Please follow the rules below :</p>
+                <p><span class="aroww rounded-circle"><i class="fa-solid fa-arrow-right text-danger"></i></span>Site name must contain at least 5 characters</p>
+                <p><span class="aroww rounded-circle "><i class="fa-solid fa-arrow-right text-danger"></i></span>Site URL must be a valid one</p>
+            </div>
+        </div>
+        <div class="bg-white py-2 w-100 text-center">
+            <table class="table">
+                <thead>
+                    <th>index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tRow">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
